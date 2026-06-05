@@ -1,0 +1,76 @@
+/* Custom App Framework Resets */
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hidden-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+    /* Smooth application screen snapping snap loops */
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Door Core Custom Animation Interpolators */
+.doors-open .door-left {
+    transform: translateX(-100%);
+}
+
+.doors-open .door-right {
+    transform: translateX(100%);
+}
+
+.doors-open #open-btn {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.3);
+}
+
+/* Procedural Vector Crest Decorative Accents */
+.royal-crest-top {
+    background: radial-gradient(circle, transparent 40%, #ebdcb9 41%, transparent 45%),
+        linear-gradient(to right, transparent, #ebdcb9, transparent);
+    background-size: 16px 16px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center center;
+    position: relative;
+}
+
+.royal-crest-top::before {
+    content: "♦";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ebdcb9;
+}
+
+.royal-crest-bottom {
+    background: radial-gradient(circle, transparent 40%, #ebdcb9 41%, transparent 45%),
+        linear-gradient(to right, transparent, #ebdcb9, transparent);
+    background-size: 16px 16px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center center;
+    position: relative;
+}
+
+.royal-crest-bottom::before {
+    content: "♦";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ebdcb9;
+}
+
+#scratch-canvas {
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
